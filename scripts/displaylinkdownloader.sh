@@ -23,17 +23,17 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )/" && pwd )"
 dlFile="DisplayLink_Ubuntu_${version}.zip"
 
 dlfileid=$(echo $dlurl | perl -pe '($_)=/.+\?id=(\d+)/')
-				echo -e "\nDownloading DisplayLink Ubuntu driver:\n"
-				#read "poopey"
-				wget -O DisplayLink_Ubuntu_${version}.zip "--post-data=fileId=$dlfileid&accept_submit=Accept" $dlurl
-				# make sure file is downloaded before continuing
-				if [ $? -ne 0 ]
-				then
-					echo -e "\nUnable to download Displaylink driver\n"
-					exit
-				fi
+	echo -e "\nDownloading DisplayLink Ubuntu driver:\n"
+	#read "poopey"
+	wget -O DisplayLink_Ubuntu_${version}.zip "--post-data=fileId=$dlfileid&accept_submit=Accept" $dlurl
+	# make sure file is downloaded before continuing
+	if [ $? -ne 0 ]
+	then
+		echo -e "\nUnable to download Displaylink driver\n"
+		exit
+	fi
 
-				echo -e "\n$driver_dir"
+	echo -e "\n$driver_dir"
 if [ -d "$driver_dir" ]
 then
 	echo -e "\nRemoving prior: \"$driver_dir\" directory"
@@ -101,7 +101,7 @@ fi
 echo -e "\n##### - Installing from $(pwd)"
 #sudo ./displaylink-installer.sh install
 	
-echo -e "\n### Finishing - dISPLAYlINK ###"
+echo -e "\n### Finishing - DISPLAYlINK ###"
 
 cd $currentDirectory
 cd ..
