@@ -758,12 +758,12 @@
             "makeup": "0"
         },
         "limiter": {
-            "state": "false",
+            "state": "true",
             "input-gain": "0",
             "limit": "-6",
             "lookahead": "5",
             "release": "100",
-            "auto-level": "true",
+            "auto-level": "false",
             "asc": "true",
             "asc-level": "1",
             "oversampling": "4",
