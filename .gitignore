@@ -1,2 +1,5 @@
-*project
-*workspace
+*.sublime-project
+*.sublime-workspace
+scripts/displaylink-driver-*
+scripts/DisplayLink_Ubuntu_*
+scripts/ukuukeykoo
