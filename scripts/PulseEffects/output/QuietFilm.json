@@ -6,12 +6,16 @@
         "use-custom-color": "false",
         "fill": "true",
         "show-bar-border": "true",
-        "scale": "1",
-        "exponent": "1",
         "sampling-freq": "10",
         "line-width": "2",
         "type": "Bars",
         "color": [
+            "1",
+            "1",
+            "1",
+            "1"
+        ],
+        "color-axis-labels": [
             "1",
             "1",
             "1",
@@ -64,13 +68,15 @@
             "state": "false",
             "input-gain": "0",
             "output-gain": "0",
-            "mode": "Downward",
-            "attack": "20",
-            "release": "100",
-            "threshold": "-12",
-            "ratio": "4",
-            "knee": "-6",
-            "makeup": "0",
+            "mode": "Upward",
+            "attack": "25",
+            "release": "262",
+            "release-threshold": "-200",
+            "threshold": "-24",
+            "ratio": "20",
+            "knee": "0",
+            "makeup": "8",
+            "boost-threshold": "-72",
             "sidechain": {
                 "listen": "false",
                 "type": "Feed-forward",
@@ -79,7 +85,11 @@
                 "preamp": "0",
                 "reactivity": "10",
                 "lookahead": "0"
-            }
+            },
+            "hpf-mode": "off",
+            "hpf-frequency": "10",
+            "lpf-mode": "off",
+            "lpf-frequency": "20000"
         },
         "crossfeed": {
             "state": "false",
@@ -744,17 +754,20 @@
             "threshold": "-18",
             "ratio": "2",
             "knee": "9",
+            "input": "0",
             "makeup": "0"
         },
         "limiter": {
             "state": "true",
             "input-gain": "0",
-            "limit": "-17",
-            "lookahead": "6.9999999999999929",
-            "release": "50",
+            "limit": "-6",
+            "lookahead": "5",
+            "release": "100",
+            "auto-level": "true",
             "asc": "true",
-            "asc-level": "0.5",
-            "oversampling": "1"
+            "asc-level": "1",
+            "oversampling": "4",
+            "output-gain": "-10"
         },
         "maximizer": {
             "state": "false",
@@ -842,9 +855,9 @@
         },
         "loudness": {
             "state": "false",
-            "loudness": "-3.1000000000000001",
-            "output": "-6",
-            "link": "-9.0999999999999996"
+            "fft": "4096",
+            "std": "ISO226-2003",
+            "volume": "0"
         },
         "multiband_gate": {
             "state": "false",
