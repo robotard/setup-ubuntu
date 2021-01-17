@@ -42,10 +42,22 @@
 			}
 		},
 		{
+			"contents": "#!/bin/bash\n\n#Setup folder vars\nhome_folder=\"/home/$(logname)\"\nsetup_folder=\"$(pwd)\"\necho \"Current user directory - \" $home_folder\n\n# TO DO - ADD LOGGINGLog everything\n# exec 3>&1 4>&2\n# trap 'exec 2>&4 1>&3' 0 1 2 3\n# exec 1>log.out 2>&1\n\nseparator(){\nsep=\"\\n-------------------------------------------------------------------\\n\"\necho -e $sep\n}\n\n#update and dist upgrade first\necho \"Initial Update & Dist-Upgrade\"\nsudo apt update -y && sudo apt dist-upgrade -y \n\nseparator\t\n\n#Install Essentials\necho \"++ INSTALLING essentials\"\nsudo apt install git wget python build-essential net-tools -y\n \n separator\n\n #Install Logitech K400+ Wireless KEyboard (Unifying Receiver)\necho \"++ INSTALLING Logitech K400+ Keyboard Receiver - Solaar\"\nsudo apt install solaar-gnome3 -y\n\nseparator\n\n#Switch to downloads folder first\ncd $home_folder/Downloads\npwd\n\n#Sublime\necho \"++ INSTALLING Sublime Text\"\n./scripts/sublime.sh\n\nseparator\n\n#Install Chrome\necho \"++ INSTALLING Chrome\"\n./scripts/chrome.sh\n\nseparator\n#Install Gnome Tweaks\necho \"++ INSTALLING Gnome Tweaks & Extensions\"\n./scripts/gnome-extensions.sh\n\nseparator\n\necho \"Moving to setup folder to install from scripts\"\ncd $setup_folder\necho \"$(pwd)\"\n\n#Install DisplayLink\necho \"++ INSTALLING DisplayLink\"\n./scripts/displaylinkdownloader.sh\n\nseparator\n\n#Install PulseEffects\necho \"++ INSTALLING PulseEffects\"\n./scripts/pulseeffects.sh\n\nseparator\n\n#Install Etcher\necho \"++ INSTALLING Etcher\"\n./scripts/etcher.sh\n\nseparator\t\n\n#Install Universal Kernel Update Utility \necho \"++ INSTALLING Universal Kernal Update Utility - Add License after\"\n./scripts/ukuu.sh\n\nseparator\n\n#Install Kodi \necho \"++ INSTALLING Kodi\"\n./scripts/kodi.sh\n\nseparator\n\n#Install Nemo\necho \"++ INSTALLING Nemo Filemanager\"\n./scripts/nemo.sh\n\nseparator\n\n#Install Gparted\necho \"++ INSTALLING GParted\"\nsudo apt install gparted -y\n\nseparator\n\n#Make Dropbox Symlink - LIKE A BOSS\nsudo mkdir $home_folder/Dropbox/Dev $home_folder/Documents/Dev\nsudo ln -s $home_folder/Dropbox/Dev $home_folder/Documents/Dev\n\n#Install Dropbox\necho \"++ INSTALLING Dropbox\"\n./scripts/dropbox.sh\n\n\n#Autoremove stuffs\necho \"-- AUTOREMOVING autoremovables\"\nsudo apt autoremove -y\n\n",
 			"file": "setupubuntu.sh",
+			"file_size": 2148,
+			"file_write_time": 132459034710000000,
 			"settings":
 			{
-				"buffer_size": 2148,
+				"buffer_size": 2158,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/gnome-extensions.sh",
+			"settings":
+			{
+				"buffer_size": 273,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -54,7 +66,7 @@
 			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 19,
+				"buffer_size": 114,
 				"line_ending": "Unix"
 			}
 		},
@@ -121,10 +133,12 @@
 	},
 	"expanded_folders":
 	[
-		"/home/robsta/Dropbox/Dev/Ubuntu/setup-ubuntu"
+		"/home/robsta/Documents/Dev/Dev/Ubuntu/setup-ubuntu",
+		"/home/robsta/Documents/Dev/Dev/Ubuntu/setup-ubuntu/scripts"
 	],
 	"file_history":
 	[
+		"/home/robsta/Documents/symlinkPEPreSet.txt",
 		"/home/robsta/Documents/Dev/Ubuntu/displaylink-debian/.gitignore",
 		"/home/robsta/Documents/setup-ubuntu-master/scripts/ukuu.sh",
 		"/home/robsta/Documents/Dev/Ubuntu/setup-ubuntu/scripts/kodi2.sh",
@@ -133,7 +147,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -167,7 +181,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -196,7 +210,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -225,7 +239,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -234,15 +248,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2148,
+						"buffer_size": 2158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								587,
-								587
+								1061,
+								1061
 							]
 						],
 						"settings":
@@ -250,19 +264,51 @@
 							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 846.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scripts/gnome-extensions.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								189,
+								189
+							],
+							[
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19,
+						"buffer_size": 114,
 						"regions":
 						{
 						},
@@ -281,11 +327,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "scripts/pulseeffects.sh",
 					"semi_transient": false,
 					"settings":
@@ -310,11 +356,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "scripts/chrome.sh",
 					"semi_transient": false,
 					"settings":
@@ -326,8 +372,8 @@
 						"selection":
 						[
 							[
-								116,
-								116
+								0,
+								0
 							]
 						],
 						"settings":
@@ -338,11 +384,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "scripts/sublime.sh",
 					"semi_transient": false,
 					"settings":
@@ -366,7 +412,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -374,7 +420,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -411,7 +457,7 @@
 	"project": "setupubuntu.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":

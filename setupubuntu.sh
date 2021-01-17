@@ -49,8 +49,8 @@ echo "++ INSTALLING Chrome"
 
 separator
 #Install Gnome Tweaks
-echo "++ INSTALLING Gnome Tweaks"
-sudo apt install gnome-tweaks -y
+echo "++ INSTALLING Gnome Tweaks & Extensions"
+./scripts/gnome-extensions.sh
 
 separator
 
