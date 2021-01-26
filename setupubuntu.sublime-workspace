@@ -42,10 +42,10 @@
 			}
 		},
 		{
-			"contents": "#!/bin/bash\n\n#Setup folder vars\nhome_folder=\"/home/$(logname)\"\nsetup_folder=\"$(pwd)\"\necho \"Current user directory - \" $home_folder\n\n# TO DO - ADD LOGGINGLog everything\n# exec 3>&1 4>&2\n# trap 'exec 2>&4 1>&3' 0 1 2 3\n# exec 1>log.out 2>&1\n\nseparator(){\nsep=\"\\n-------------------------------------------------------------------\\n\"\necho -e $sep\n}\n\n#update and dist upgrade first\necho \"Initial Update & Dist-Upgrade\"\nsudo apt update -y && sudo apt dist-upgrade -y \n\nseparator\t\n\n#Install Essentials\necho \"++ INSTALLING essentials\"\nsudo apt install git wget python build-essential net-tools -y\n \n separator\n\n #Install Logitech K400+ Wireless KEyboard (Unifying Receiver)\necho \"++ INSTALLING Logitech K400+ Keyboard Receiver - Solaar\"\nsudo apt install solaar-gnome3 -y\n\nseparator\n\n#Switch to downloads folder first\ncd $home_folder/Downloads\npwd\n\n#Sublime\necho \"++ INSTALLING Sublime Text\"\n./scripts/sublime.sh\n\nseparator\n\n#Install Chrome\necho \"++ INSTALLING Chrome\"\n./scripts/chrome.sh\n\nseparator\n#Install Gnome Tweaks\necho \"++ INSTALLING Gnome Tweaks & Extensions\"\n./scripts/gnome-extensions.sh\n\nseparator\n\necho \"Moving to setup folder to install from scripts\"\ncd $setup_folder\necho \"$(pwd)\"\n\n#Install DisplayLink\necho \"++ INSTALLING DisplayLink\"\n./scripts/displaylinkdownloader.sh\n\nseparator\n\n#Install PulseEffects\necho \"++ INSTALLING PulseEffects\"\n./scripts/pulseeffects.sh\n\nseparator\n\n#Install Etcher\necho \"++ INSTALLING Etcher\"\n./scripts/etcher.sh\n\nseparator\t\n\n#Install Universal Kernel Update Utility \necho \"++ INSTALLING Universal Kernal Update Utility - Add License after\"\n./scripts/ukuu.sh\n\nseparator\n\n#Install Kodi \necho \"++ INSTALLING Kodi\"\n./scripts/kodi.sh\n\nseparator\n\n#Install Nemo\necho \"++ INSTALLING Nemo Filemanager\"\n./scripts/nemo.sh\n\nseparator\n\n#Install Gparted\necho \"++ INSTALLING GParted\"\nsudo apt install gparted -y\n\nseparator\n\n#Make Dropbox Symlink - LIKE A BOSS\nsudo mkdir $home_folder/Dropbox/Dev $home_folder/Documents/Dev\nsudo ln -s $home_folder/Dropbox/Dev $home_folder/Documents/Dev\n\n#Install Dropbox\necho \"++ INSTALLING Dropbox\"\n./scripts/dropbox.sh\n\n\n#Autoremove stuffs\necho \"-- AUTOREMOVING autoremovables\"\nsudo apt autoremove -y\n\n",
+			"contents": "#!/bin/bash\n\n#Setup folder vars\nhome_folder=\"/home/$(logname)\"\nsetup_folder=\"$(pwd)\"\necho \"Current user directory - \" $home_folder\n\n# TO DO - ADD LOGGINGLog everything\n# exec 3>&1 4>&2\n# trap 'exec 2>&4 1>&3' 0 1 2 3\n# exec 1>log.out 2>&1\n\nseparator(){\nsep=\"\\n-------------------------------------------------------------------\\n\"\necho -e $sep\n}\n\n#update and dist upgrade first\necho \"Initial Update & Dist-Upgrade\"\nsudo apt update -y && sudo apt dist-upgrade -y \n\nseparator\t\n\n#Install Essentials\necho \"++ INSTALLING essentials\"\nsudo apt install git wget python build-essential net-tools -y\n \n separator\n\n #Install Logitech K400+ Wireless KEyboard (Unifying Receiver)\necho \"++ INSTALLING Logitech K400+ Keyboard Receiver - Solaar\"\nsudo apt install solaar-gnome3 -y\n\nseparator\n\n#Switch to downloads folder first\ncd $home_folder/Downloads\npwd\n\nseparator\n\necho \"Moving to setup folder to install from scripts\"\ncd $setup_folder\necho \"$(pwd)\"\n\n#Sublime\necho \"++ INSTALLING Sublime Text\"\n./scripts/sublime.sh\n\nseparator\n\n#Install Chrome\necho \"++ INSTALLING Chrome\"\n./scripts/chrome.sh\n\nseparator\n#Install Gnome Tweaks\necho \"++ INSTALLING Gnome Tweaks & Extensions\"\n./scripts/gnome-extensions.sh\n\n#Install DisplayLink\necho \"++ INSTALLING DisplayLink\"\n./scripts/displaylinkdownloader.sh\n\nseparator\n\n#Install PulseEffects\necho \"++ INSTALLING PulseEffects\"\n./scripts/pulseeffects.sh\n\nseparator\n\n#Install Etcher\necho \"++ INSTALLING Etcher\"\n./scripts/etcher.sh\n\nseparator\t\n\n#Install Universal Kernel Update Utility \necho \"++ INSTALLING Universal Kernal Update Utility - Add License after\"\n./scripts/ukuu.sh\n\nseparator\n\n#Install Kodi \necho \"++ INSTALLING Kodi\"\n./scripts/kodi.sh\n\nseparator\n\n#Install Nemo\necho \"++ INSTALLING Nemo Filemanager\"\n./scripts/nemo.sh\n\nseparator\n\n#Install Gparted\necho \"++ INSTALLING GParted\"\nsudo apt install gparted -y\n\nseparator\n\n#Make Dropbox Symlink - LIKE A BOSS\nsudo mkdir $home_folder/Dropbox/Dev $home_folder/Documents/Dev\nsudo ln -s $home_folder/Dropbox/Dev $home_folder/Documents/Dev\n\n#Install Dropbox\necho \"++ INSTALLING Dropbox\"\n./scripts/dropbox.sh\n\n\n#Autoremove stuffs\necho \"-- AUTOREMOVING autoremovables\"\nsudo apt autoremove -y\n\n",
 			"file": "setupubuntu.sh",
-			"file_size": 2148,
-			"file_write_time": 132459034710000000,
+			"file_size": 2158,
+			"file_write_time": 132553923103095407,
 			"settings":
 			{
 				"buffer_size": 2158,
@@ -57,7 +57,7 @@
 			"file": "scripts/gnome-extensions.sh",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 444,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -147,7 +147,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -181,7 +181,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -210,7 +210,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -239,7 +239,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -255,8 +255,8 @@
 						"selection":
 						[
 							[
-								1061,
-								1061
+								936,
+								936
 							]
 						],
 						"settings":
@@ -264,7 +264,7 @@
 							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 846.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -276,19 +276,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 273,
+						"buffer_size": 444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								189,
-								189
-							],
-							[
-								273,
-								273
+								444,
+								444
 							]
 						],
 						"settings":
@@ -299,7 +295,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -327,7 +323,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -356,7 +352,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -384,7 +380,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -412,7 +408,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -420,7 +416,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -457,7 +453,7 @@
 	"project": "setupubuntu.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
