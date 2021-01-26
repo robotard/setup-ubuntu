@@ -44,7 +44,7 @@ echo "++ INSTALLING Sublime Text"
 separator
 
 #Install Chrome
-echo "++ INSTALLING Chrome"
+echo "++ INSTALLING Chrome - BETA"
 ./scripts/chrome.sh
 
 separator
