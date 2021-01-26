@@ -28,8 +28,8 @@ sudo apt install git wget python build-essential net-tools -y
  separator
 
  #Install Logitech K400+ Wireless KEyboard (Unifying Receiver)
-echo "++ INSTALLING Logitech K400+ Keyboard Receiver - Solaar"
-sudo apt install solaar-gnome3 -y
+#echo "++ INSTALLING Logitech K400+ Keyboard Receiver - Solaar"
+#sudo apt install solaar-gnome3 -y
 
 separator
 
@@ -59,10 +59,10 @@ cd $setup_folder
 echo "$(pwd)"
 
 #Install DisplayLink
-echo "++ INSTALLING DisplayLink"
-./scripts/displaylinkdownloader.sh
+#echo "++ INSTALLING DisplayLink"
+#./scripts/displaylinkdownloader.sh
 
-separator
+#separator
 
 #Install PulseEffects
 echo "++ INSTALLING PulseEffects"
@@ -77,10 +77,10 @@ echo "++ INSTALLING Etcher"
 separator	
 
 #Install Universal Kernel Update Utility 
-echo "++ INSTALLING Universal Kernal Update Utility - Add License after"
-./scripts/ukuu.sh
+#echo "++ INSTALLING Universal Kernal Update Utility - Add License after"
+#./scripts/ukuu.sh
 
-separator
+#separator
 
 #Install Kodi 
 echo "++ INSTALLING Kodi"
@@ -101,8 +101,8 @@ sudo apt install gparted -y
 separator
 
 #Make Dropbox Symlink - LIKE A BOSS
-sudo mkdir $home_folder/Dropbox/Dev $home_folder/Documents/Dev
-sudo ln -s $home_folder/Dropbox/Dev $home_folder/Documents/Dev
+#sudo mkdir $home_folder/Dropbox/Dev $home_folder/Documents/Dev
+#sudo ln -s $home_folder/Dropbox/Dev $home_folder/Documents/Dev
 
 #Install Dropbox
 echo "++ INSTALLING Dropbox"
